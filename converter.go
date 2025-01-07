@@ -69,7 +69,7 @@ func main() {
 			fmt.Println(convertMkdirErr)
 			return
 		}
-		convertCmd := fmt.Sprintf("win2xcur %s/*.ani -o %s", relativePathToDir, convertDir+"/"+dirName)
+		convertCmd := fmt.Sprintf("win2xcur --multiscale %s/*.ani -o %s", relativePathToDir, convertDir+"/"+dirName)
 		fmt.Println(convertCmd)
 		cmd := exec.Command("bash", "-c", convertCmd)
 		err := cmd.Run()
